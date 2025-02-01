@@ -2,8 +2,7 @@
 
 Este é um projeto desenvolvido com **Node.js**, **Express** e **PostgreSQL**, permitindo que os usuários cadastrem e gerenciem filmes, séries e animes que já assistiram ou desejam assistir. Além disso, é possível adicionar comentários e avaliações para cada título.
 
-
-![image](image.png)
+![image](https://github.com/user-attachments/assets/196ed653-0100-4cce-9362-193ecba57bd2)
 <sup> Imagem ilustrativa</sup>
 
 
