@@ -1,0 +1,52 @@
+<%- include('partials/header.ejs') %>
+<body>
+    <main>
+        <div class="main-container">
+            <div class="cadastro-filmesSeries">
+                <form action="/cadastrar" method="post">
+                    <h2>CADASTRO 🎬</h2>
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" class="input-filmesSeries" required>
+
+                    <label for="IMDb_ID">IMDb ID</label>
+                    <input type="text" name="IMDb_ID" class="input-filmesSeries" required>
+
+                    <label for="comentarios">Comentários</label>
+                    <textarea name="comentarios" rows="3" cols="30"></textarea>
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+
+            <% if (!seriadoOuFilme || seriadoOuFilme.length === 0) { %>
+                <h3>Não há séries ou filmes cadastrados</h3>
+            <% } else { %>
+                <h1>Lista Completa</h1>
+                <div class="lista-filmesSeries">
+                    <% seriadoOuFilme.forEach(sf => { %>
+                        <div class="filmesSeries-cadastrado">
+                            <img src="<%= sf.poster%>" alt="<%= sf.titulo %>">
+                            <div class="filmesSeries-info">
+                                <h2><%= sf.titulo %></h2>
+                                <p><%= sf.genero %></p>
+                                <p><span>Comentários</span><br><%= sf.comentarios || "Não adicionado"%></p>
+                                <p><span>AVALIAÇÃO IMDb<br><%= sf.ranking %>/10</span> </p>
+
+                                <div class="botoes-acoes">
+                                    <form action="/deletar/<%= sf.imdb_id%>" method="post">
+                                        <button type="submit" class="btn-excluir">Excluir</button>
+                                    </form>
+
+                                    <a href="/editar/<%= sf.imdb_id%>">
+                                        <button type="button" class="btn-editar">Editar</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            <% } %>
+        </div>  
+    </main>
+</body>
+</html>

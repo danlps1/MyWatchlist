@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(230, 230, 214);
+  overflow-x: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.cadastro-filmesSeries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.cadastro-filmesSeries h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Concert One", cursive;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.input-filmesSeries,
+textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #ffffff;
+  color: black;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(37, 36, 36);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-family: "Concert One", cursive;
+  color: #333;
+}
+
+.lista-filmesSeries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.filmesSeries-cadastrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filmesSeries-cadastrado:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(111, 110, 110, 0.8);
+}
+
+.filmesSeries-cadastrado img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 250px;
+  margin-bottom: 15px;
+}
+
+.filmesSeries-info {
+  text-align: center;
+}
+
+.filmesSeries-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.filmesSeries-info p {
+  margin: 5px 0;
+  padding: 3px;
+  font-size: 14px;
+}
+
+span {
+  font-weight: bold;
+}
+
+/* Estilização dos botões de ação */
+.botoes-acoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-excluir {
+  background-color: #d1433e;
+}
+
+.btn-excluir:hover {
+  background-color: #c9302c;
+}
+
+.btn-editar {
+  background-color: #333;
+}
+
+.btn-editar:hover {
+  background-color: rgb(37, 36, 36);
+}

@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') %>
+<body>
+    <main>
+        <div class="main-container">
+            <div class="cadastro-filmesSeries">
+                <form action="/editar/<%= seriadoOuFilme[0].imdb_id %>" method="post">
+                    <input type="hidden" name="_method" value="PATCH">
+                    <h2>Editar🎬</h2>
+                    
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" class="input-filmesSeries" value="<%= seriadoOuFilme[0].titulo %>">
+                    
+                    <label for="titulo">IMDb ID</label>
+                    <input type="text" name="IMDb_ID" class="input-filmesSeries" value="<%= seriadoOuFilme[0].imdb_id%>" disabled>
+
+                    <label for="comentarios">Comentários</label>
+                    <textarea name="comentarios" rows="3" cols="30"><%= seriadoOuFilme[0].comentarios %></textarea>
+
+                    <button type="submit">Atualizar</button>
+                </form>
+            </div>
+        </div>  
+    </main>
+</body>
+</html>
